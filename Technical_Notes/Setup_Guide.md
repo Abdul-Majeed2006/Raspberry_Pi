@@ -102,42 +102,42 @@ You have three main options:
 
 ---
 
-## Step 4: Test Your Setup
+## Step 4: Verify System Communication
 
-Run this simple test:
+Run this simple logic test to ensure your computer can send instructions to the Pico's processor:
 
 ```python
 import machine
-import time
+import os
 
-led = machine.Pin("LED", machine.Pin.OUT)
+# Identify the chip
+print(f"Controller: {os.uname().machine}")
 
-for i in range(5):
-    led.toggle()
-    time.sleep(0.5)
+# Perform a basic math operation in memory
+result = 12 * 12
+print(f"Math calculation verified: 12 * 12 = {result}")
+
+# Check the main system frequency
+print(f"CPU Frequency: {machine.freq() / 1000000} MHz")
 ```
 
-**Expected Result**: The onboard LED should blink 5 times.
+**Expected Result**: The terminal should print the chip details and the math result.
 
-✅ If it works, you're ready to start **Chapter 1**!
+✅ If you see the text, your communication channel is established and the Pico is processing code correctly.
 
 ---
 
 ## Troubleshooting
 
 ### "Device not found" error
-- Make sure you flashed MicroPython (Step 1)
-- Try a different USB cable (some are power-only, no data)
-- On Windows, you might need to install drivers
+- Make sure you flashed MicroPython (Step 1).
+- Try a different USB cable (ensure it is a high-quality data cable).
+- On Windows, verify the COM port in Device Manager.
 
 ### "Import Error: machine"
-- You're running **standard Python** instead of **MicroPython**
-- Make sure your editor is connected to the Pico, not your computer's Python
-
-### Code runs but LED doesn't blink
-- Check your wiring
-- Try the onboard LED first (no wiring needed): `machine.Pin("LED", machine.Pin.OUT)`
+- You're running **standard Python** on your computer instead of **MicroPython** on the Pico.
+- Ensure your editor's interpreter is set to "MicroPython (Raspberry Pi Pico)".
 
 ---
 
-**All set?** Head to [01_Hello_Pico.ipynb](01_Hello_Pico.ipynb) and let's begin!
+**All set?** You are ready to begin exploring the system logic.
