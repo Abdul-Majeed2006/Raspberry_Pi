@@ -29,3 +29,7 @@ def set_brightness(percent):
 
 ### 4. Why this matters for RGB?
 When mixing colors (like Orange), if you don't use Gamma, one color will often "overpower" the others, and you won't get the clean mix you want. Using Gamma is the secret to getting professional, vivid colors.
+
+![RGB Mixing Theory](assets/rgb_mixing_prism.png)
+
+Understanding additive color (Red + Green = Yellow) is essential when building complex visual indicators.
