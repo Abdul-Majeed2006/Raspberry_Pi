@@ -2,6 +2,12 @@
 # PROJECT: THE ANALOG DIMMER & SAFETY ALARM
 # Goal: Use physical knobs (ADC) to control LED brightness (PWM) 
 # and use conditional logic to trigger a buzzer.
+#
+# ENGINEERING INSIGHT:
+# This project introduces "Signal Translation." The Pico takes
+# a continuous physical movement (twisting a knob) and translates
+# it into a digital value. This is the foundation of how 
+# joysticks, volume knobs, and industrial sensors work.
 # ==========================================================
 
 from machine import Pin, PWM, ADC

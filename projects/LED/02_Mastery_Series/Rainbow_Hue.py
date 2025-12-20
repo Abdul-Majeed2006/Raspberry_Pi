@@ -2,6 +2,13 @@
 # MASTERY PROJECT 1: THE RAINBOW HUE WHEEL
 # Goal: Use Knob 1 to slide through the entire color spectrum 
 # and Knob 2 to control the overall brightness.
+#
+# ENGINEERING INSIGHT:
+# This project explores "Data Normalization & Mapping." 
+# We are taking a simple 1D input (the knob) and using it 
+# to traverse a 3D coordinate system (Red, Green, Blue). 
+# This is how complex controls, like 3D printer heads or 
+# robotic arms, are driven by simple user inputs.
 # ==========================================================
 
 from machine import Pin, PWM, ADC

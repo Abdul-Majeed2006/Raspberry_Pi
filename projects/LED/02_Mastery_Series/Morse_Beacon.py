@@ -2,6 +2,13 @@
 # MASTERY PROJECT 4: THE MORSE CODE BEACON
 # Goal: Use a Python Dictionary to translate text into 
 # a sequence of light and sound signals (Dots & Dashes).
+#
+# ENGINEERING INSIGHT:
+# This project teaches "Data Encoding & Serialization." 
+# Engineers must often translate complex data (words) into 
+# a series of simple bursts (bits) to send over wires or 
+# radio waves. Dictionaries are the primary tool for 
+# mapping human-readable data to machine-executable patterns.
 # ==========================================================
 
 from machine import Pin, PWM

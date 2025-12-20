@@ -2,6 +2,13 @@
 # MASTERY PROJECT 5: THE REACTION GAME
 # Goal: Test your reflexes! Wait for the Green light and 
 # turn Knob 1 as fast as you can.
+#
+# ENGINEERING INSIGHT:
+# This project explores "Precision Latency Timing." 
+# In high-speed systems (like airbags or fighter jets), 
+# milliseconds matter. By using `ticks_ms()` and "Delta 
+# Detection" (detecting a change in value), engineers 
+# can measure human performance with extreme accuracy.
 # ==========================================================
 
 from machine import Pin, PWM, ADC

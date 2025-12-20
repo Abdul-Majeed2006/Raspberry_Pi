@@ -1,6 +1,13 @@
 # ==========================================================
 # PROJECT: THE EMERGENCY SIREN (SIGHT & SOUND)
 # Goal: Use PWM to synchronize a dual-color light with a two-tone siren.
+#
+# ENGINEERING INSIGHT:
+# This project teaches "Alert Priority." Engineers design sirens 
+# to be "Uncomfortable"—the high-pitched beep and rapid color 
+# switching are designed to bypass the human brain's filter 
+# and demand immediate attention. This is a lesson in 
+# User Interface (UI) design for safety.
 # ==========================================================
 
 from machine import Pin, PWM, ADC

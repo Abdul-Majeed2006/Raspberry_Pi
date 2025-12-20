@@ -1,6 +1,13 @@
 # ==========================================================
 # PROJECT: THE RGB COLOR LAB
 # Goal: Master Additive Color Theory using Primary Signals.
+#
+# ENGINEERING INSIGHT:
+# This project explores "Multi-Signal Synchronization." To a computer,
+# there is no "Yellow"—there is only Red and Green firing
+# at the same frequency. Engineers must understand how 
+# to combine simple parts (Red, Green, Blue) to create 
+# complex states (Cyan, Magenta, etc.).
 # ==========================================================
 
 from machine import Pin, PWM

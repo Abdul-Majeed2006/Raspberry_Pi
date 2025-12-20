@@ -2,6 +2,13 @@
 # MASTERY PROJECT 2: THE COMBINATION SAFE
 # Goal: Find the two secret 'Analog Codes' using the knobs 
 # to unlock the safe (Green Light + Victory Chirp).
+#
+# ENGINEERING INSIGHT:
+# This project teaches "Logical Thresholding." Safe cracking 
+# is just the process of checking if an input (the dial) 
+# matches a specific target constant. By adding a "Margin," 
+# we account for the fact that analog sensors are "Noisy" 
+# and never perfectly exact.
 # ==========================================================
 
 from machine import Pin, PWM, ADC

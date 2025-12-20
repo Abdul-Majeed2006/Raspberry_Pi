@@ -3,6 +3,13 @@
 # Goal: Find the "Hidden Color" chosen by the Pico.
 # Use Knob 1 for Hue and Knob 2 for Brightness.
 # The Buzzer will beep faster as you get closer!
+#
+# ENGINEERING INSIGHT:
+# This project introduces "Proximity Feedback Loops." 
+# Engineers use these to help humans or machines "home in" 
+# on a target. By calculating the "Error" (the distance 
+# from the goal) and turning it into sound, we create 
+# a real-time guidance system.
 # ==========================================================
 
 from machine import Pin, PWM, ADC

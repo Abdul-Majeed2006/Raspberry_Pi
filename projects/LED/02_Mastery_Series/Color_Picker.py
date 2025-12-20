@@ -2,6 +2,12 @@
 # MASTERY PROJECT 7: THE SOUND-LINKED COLOR PICKER
 # Goal: Use Knob 1 for Red, Knob 2 for Blue, and link 
 # the Green LED's brightness to the Buzzer's Pitch.
+#
+# ENGINEERING INSIGHT:
+# This project teaches "Derived Data Dependency." Engineers often 
+# link multiple systems together so that if one thing changes, 
+# everything else reacts automatically. Here, the Green light 
+# doesn't have its own knob—it "watches" the pitch and reacts.
 # ==========================================================
 
 from machine import Pin, PWM, ADC

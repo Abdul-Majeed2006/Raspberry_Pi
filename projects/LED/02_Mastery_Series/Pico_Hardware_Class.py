@@ -2,6 +2,14 @@
 # MASTERY PROJECT 10: THE VIRTUAL LIGHTBULB (OOP)
 # Goal: Transition from "Scripting" to "Engineering."
 # We will build a 'Class'—a blueprint for a smart LED object.
+#
+# ENGINEERING INSIGHT:
+# This project introduces "Encapsulation & Abstraction." 
+# Professional engineers don't want to think about "Pins" 
+# and "Duty Cycles" every time they work. By building a 
+# Class, we hide the "messy" hardware details inside a 
+# clean "Object." This is what allows humans to build 
+# massive systems like space rockets and self-driving cars.
 # ==========================================================
 
 from machine import Pin, PWM

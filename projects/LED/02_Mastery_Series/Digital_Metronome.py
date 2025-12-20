@@ -2,6 +2,13 @@
 # MASTERY PROJECT 3: THE DIGITAL METRONOME
 # Goal: Turn the Pico into a professional music tool.
 # Use the Knob to set BPM (Beats Per Minute) from 40 to 200.
+#
+# ENGINEERING INSIGHT:
+# This project teaches "Real-Time Math Conversion." To a computer, 
+# "BPM" doesn't mean anything. Engineers must translate human 
+# concepts (Beats per Minute) into machine concepts (Seconds of 
+# delay). This "Frequency-to-Period" conversion is vital in 
+# communication systems and clock synchronization.
 # ==========================================================
 
 from machine import Pin, PWM, ADC

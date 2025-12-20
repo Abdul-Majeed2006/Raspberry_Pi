@@ -2,6 +2,13 @@
 # FINAL PROJECT: THE INTELLIGENT TRAFFIC LIGHT (PRO MODE)
 # Goal: Build a professional 4-phase intersection with 
 # distinct audio cues and dynamic timing.
+#
+# ENGINEERING INSIGHT:
+# This project introduces "State Machines" and "Sensor 
+# Integration." By using a knob to control timing, we are 
+# simulating how engineers use sensors to adjust traffic 
+# flow in real-time. This is the foundation of building 
+# predictable, automated, and safe industrial systems.
 # ==========================================================
 
 from machine import Pin, PWM, ADC

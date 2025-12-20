@@ -1,6 +1,13 @@
 # ==========================================================
 # PROJECT: THE BREATHING LED (GAMMA CORRECTION)
 # Goal: Use mathematics to match LED brightness to human perception.
+#
+# ENGINEERING INSIGHT:
+# This project teaches "Biometric Mapping." Computers see light 
+# linearly (1, 2, 3), but humans see it exponentially. Engineering
+# isn't just about making things work, it's about making them 
+# work for *humans*. Gamma Correction is the bridge between 
+# raw data and human comfort.
 # ==========================================================
 
 from machine import Pin, PWM

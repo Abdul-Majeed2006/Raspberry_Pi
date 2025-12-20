@@ -2,6 +2,13 @@
 # MASTERY PROJECT 6: THE MOOD LANTERN
 # Goal: Use Sine Waves to create smooth, organic color
 # breathing effects that cycle automatically.
+#
+# ENGINEERING INSIGHT:
+# This project explores "Trigonometric Modulation." Most human 
+# experiences don't happen in straight lines (on/off). 
+# By using the Sine function, engineers create "Organic 
+# Motion"—making hardware feel less like a machine and 
+# more like a living, breathing entity.
 # ==========================================================
 
 from machine import Pin, PWM

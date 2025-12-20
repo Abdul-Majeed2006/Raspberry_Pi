@@ -3,6 +3,13 @@
 # Goal: Build a high-performance racing engine.
 # Knob 1 = Accelerator (RPM: 1,000 to 18,000)
 # Listen to the "Engine" and watch the "Shift Lights"!
+#
+# ENGINEERING INSIGHT:
+# This project is a "Safety Telemetry Simulation." Engineers use 
+# visual and audio cues to communicate complex data (RPM) to a 
+# human operator instantly. The multi-stage shift lights teach 
+# how to design "Predictive Warning Systems"—alerting the user 
+# *before* an emergency (the rev limiter) happens.
 # ==========================================================
 
 from machine import Pin, PWM, ADC
