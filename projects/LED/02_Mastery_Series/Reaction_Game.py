@@ -51,9 +51,13 @@ try:
         
         start_time = time.ticks_ms() # Capture start time in milliseconds
         
-        # Wait for the user to crank the knob
-        while knob.read_u16() < 60000:
-            pass 
+        # DELTA DETECTION: Capture the starting position of the knob
+        start_knob_val = knob.read_u16()
+        current_knob_val = start_knob_val
+        
+        # Wait for the user to move the knob by at least 10,000 units
+        while abs(current_knob_val - start_knob_val) < 10000:
+            current_knob_val = knob.read_u16()
         
         end_time = time.ticks_ms() # Capture end time
         
