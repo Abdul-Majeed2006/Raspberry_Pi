@@ -19,6 +19,8 @@ To get the most out of this course, we recommend the following sequence:
 
 *   **[Component Signals](Technical_Notes/Component_Signals.md)**: Understanding Digital vs. Analog vs. PWM.
 *   **[Perception & Gamma](projects/LED/07_Perception_and_Gamma.md)**: Why computers and humans see light differently.
+*   **[Motor Control Theory](Technical_Notes/08_Motor_Control_Theory.md)**: H-Bridges, Power Isolation, and Safety.
+*   **[Differential Drive Logic](Technical_Notes/09_Differential_Drive_Logic.md)**: The Geometry of Turing.
 *   **[Deployment & Standalone](projects/Deployment_and_Main_PY.md)**: Taking your projects "off the leash."
 
 ---
@@ -40,13 +42,20 @@ Once you've mastered the theory, put it into action. Every project includes **En
 *   **The Virtual Lightbulb**: Intro to **Object-Oriented Programming (OOP)**.
 *   **Mood Lantern**: Organic motion with Sine waves.
 
+### 3. [03_Robotics](projects/Robotics)
+*Kinetic Motion & Mechanics*
+*   **Motor Calibration**: Mastering speed ramping and H-bridges.
+*   **Differential Steering**: Navigating a chassis with dual-motor logic.
+*   **The Robot Library**: Building a high-level API for movement.
+
 ---
 
 ## 🔧 Hardware Requirements
 To complete this course, you will need:
-1.  **Raspberry Pi Pico** (or Pico W)
+1.  **Raspberry Pi Pico 2** (or original Pico)
 2.  **Breadboard & Jumper Wires**
-3.  **Components**: RGB LED, 2x Potentiometers (Knobs), 1x Buzzer, and Resistor suite.
+3.  **Components**: RGB LED, 2x Potentiometers, 1x Buzzer, Resistors.
+4.  **Robotics**: L298N Motor Driver, 2x DC Motors, 2x Wheels, 9V Li-ion Battery.
 
 ---
 
