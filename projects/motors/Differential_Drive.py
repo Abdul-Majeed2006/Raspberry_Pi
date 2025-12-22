@@ -1,18 +1,18 @@
 # ==========================================================
-# ROBOTICS PROJECT 2: DIFFERENTIAL DRIVE
+# MOTOR PROJECT 2: DIFFERENTIAL DRIVE
 # Goal: Create a high-level navigation library to control 
-# a 2-wheeled robot chassis.
+# a 2-wheeled motorized chassis.
 #
 # ENGINEERING INSIGHT:
-# "Abstraction." In complex robotics, we don't want to think 
+# "Abstraction." In complex motor systems, we don't want to think 
 # about IN1/IN2 every time we want to move. We create a 
-# "Drive Layer" so we can just say robot.forward(). 
+# "Drive Layer" so we can just say drive.forward(). 
 # ==========================================================
 
 from machine import Pin, PWM
 from time import sleep
 
-class Robot:
+class MotorDrive:
     def __init__(self):
         # --- Motor A (Left) ---
         self.ena = PWM(Pin(15))
@@ -71,26 +71,26 @@ class Robot:
         self.set_motors(0, 0, 0, 0)
 
 # --- EXECUTION ---
-bot = Robot()
+drive = MotorDrive()
 
 try:
     print("--- STARTING NAVIGATION TEST ---")
     
-    bot.forward(45000)
+    drive.forward(45000)
     sleep(2)
     
-    bot.stop()
+    drive.stop()
     sleep(1)
     
-    bot.spin_right(45000) # Turn 90 degrees (approx)
+    drive.spin_right(45000) # Turn 90 degrees (approx)
     sleep(0.8)
     
-    bot.forward(45000)
+    drive.forward(45000)
     sleep(2)
     
-    bot.stop()
-    print("Test Complete. Bot Securing.")
+    drive.stop()
+    print("Test Complete. Drive Securing.")
 
 except KeyboardInterrupt:
-    bot.stop()
+    drive.stop()
     print("\nSafety Stop Triggered.")

@@ -65,8 +65,16 @@ On the Pico, we use **PWM (Pulse Width Modulation)** on the `ENA` pin.
 - **The Concept**: We flip the ENA pin ON and OFF so fast (1,000 times a second) that the motor only feels the "Average" power.
 - **The Scale**: In MicroPython, we use numbers from **0** (Stop) to **65535** (Full Speed).
 
-### Why use Ramping?
-If you tell a motor to go from 0 to 100% instantly, the gears take a lot of stress and the battery sees a huge "spike" in demand. We use **Ramping** to smoothly increase the speed over 1 or 2 seconds.
+---
+
+## 6. Engineering Fix: Software Polarity 🔄
+In a 4WD robot, if the motors are glued on opposite sides, they might be wired to spin in different directions. 
+
+**The Choice**:
+- **Hardware Fix**: Unsolder and flip the wires. (Hard, messy).
+- **Software Fix**: Use an "Inversion Flag" in your code to swap the signals. (Easy, elegant).
+
+We use a **Polarity Mask** in our `DriveSystem` class to ensure that when you say "Forward," the computer knows exactly which signals each specific motor needs to spin in the right direction.
 
 ---
 

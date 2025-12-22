@@ -1,5 +1,5 @@
 # ==========================================================
-# ROBOTICS UTILITY: SIGNAL VERIFICATION (FINAL)
+# MOTOR UTILITY: SIGNAL VERIFICATION (FINAL)
 # Goal: Debugging connections without mechanical stress.
 # ==========================================================
 

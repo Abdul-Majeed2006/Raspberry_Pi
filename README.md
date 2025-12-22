@@ -42,11 +42,11 @@ Once you've mastered the theory, put it into action. Every project includes **En
 *   **The Virtual Lightbulb**: Intro to **Object-Oriented Programming (OOP)**.
 *   **Mood Lantern**: Organic motion with Sine waves.
 
-### 3. [03_Robotics](projects/Robotics)
-*Kinetic Motion & Mechanics*
+### 3. [03_Motor_Series](projects/motors)
+*Kinetic Motion & Axle Mechanics*
 *   **Motor Calibration**: Mastering speed ramping and H-bridges.
-*   **Differential Steering**: Navigating a chassis with dual-motor logic.
-*   **The Robot Library**: Building a high-level API for movement.
+*   **Synchronized AWD**: Navigating a 4WD chassis with dual-axle logic.
+*   **The Motor Library**: Building a high-level API for movement.
 
 ---
 
@@ -55,7 +55,7 @@ To complete this course, you will need:
 1.  **Raspberry Pi Pico 2** (or original Pico)
 2.  **Breadboard & Jumper Wires**
 3.  **Components**: RGB LED, 2x Potentiometers, 1x Buzzer, Resistors.
-4.  **Robotics**: L298N Motor Driver, 2x DC Motors, 2x Wheels, 9V Li-ion Battery.
+4.  **Motors**: L298N Motor Driver, 2x DC Motors, 2x Wheels, 9V Li-ion Battery.
 
 ---
 
