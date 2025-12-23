@@ -1,15 +1,15 @@
 # ==========================================================
-# MOTOR PROJECT 2: SYNCHRONIZED AWD (CALIBRATED)
-# Goal: Fix physical wiring issues in software.
+# MOTOR PROJECT: SYNCHRONIZED AWD (FINAL CALIBRATION)
+# Goal: Fixed the inverted back axle in software.
 # ==========================================================
 
 from machine import Pin, PWM
 from time import sleep
 
 class AWD_System:
-    def __init__(self, invert_front=True, invert_back=False):
+    def __init__(self, invert_front=False, invert_back=True):
         # --- CALIBRATION ---
-        # If your motor is wired 'backwards', we flip this flag.
+        # Front was reported as Normal. Back was reported as Inverted.
         self.inv_f = invert_front
         self.inv_b = invert_back
         
@@ -33,11 +33,12 @@ class AWD_System:
         Calculates and sends signals for Sync'd Axle Drive.
         mode: "4WD", "FWD", "RWD"
         """
-        # 1. Base Logic (1 or -1)
-        dir_mult = 1 if direction == "forward" else -1
-        if direction == "stop": dir_mult = 0
+        # 1. Base Logic (1 or -1 or 0)
+        dir_mult = 0
+        if direction == "forward": dir_mult = 1
+        elif direction == "backward": dir_mult = -1
         
-        # 2. Polarity Masking (The "Virtual Swap")
+        # 2. Polarity Masking (Corrects wiring mistakes)
         f_dir = dir_mult * (-1 if self.inv_f else 1)
         b_dir = dir_mult * (-1 if self.inv_b else 1)
         
@@ -50,28 +51,29 @@ class AWD_System:
         b_speed = speed if mode in ["4WD", "RWD"] else 0
 
         # 5. EXECUTION
-        # ENGINEERING INSIGHT: 
-        # By setting the pins first, we prepare the 'path'. 
-        # By setting PWM last, we release the power.
         self.f_in1.value(f1); self.f_in2.value(f2)
         self.b_in3.value(b1); self.b_in4.value(b2)
         
-        # Small 1ms stagger to prevent battery dip (The "Sync Fix")
+        # Small stagger to prevent battery sag
         self.f_ena.duty_u16(f_speed)
-        sleep(0.001) 
+        sleep(0.005) 
         self.b_enb.duty_u16(b_speed)
 
     def stop(self):
         self.drive(0, "stop")
 
 # --- EXECUTION ---
-# Based on your test, Front is Inverted, Back is Normal.
-truck = AWD_System(invert_front=True, invert_back=False)
+# Calibrated: Front is Normal (False), Back is Inverted (True).
+truck = AWD_System(invert_front=False, invert_back=True)
 
 try:
     print("--- CALIBRATED AWD TEST ---")
     print("All wheels should spin FORWARD now.")
-    truck.drive(45000, "forward", "4WD")
+    truck.drive(45000, "forward")
+    sleep(3)
+    
+    print("Switching to BACKWARD...")
+    truck.drive(45000, "backward")
     sleep(3)
     
     truck.stop()

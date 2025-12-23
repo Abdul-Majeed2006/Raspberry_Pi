@@ -52,7 +52,7 @@ Once you've mastered the theory, put it into action. Every project includes **En
 
 ## 🔧 Hardware Requirements
 To complete this course, you will need:
-1.  **Raspberry Pi Pico 2** (or original Pico)
+1.  **Raspberry Pi Pico** (Original, W, or Pico 2)
 2.  **Breadboard & Jumper Wires**
 3.  **Components**: RGB LED, 2x Potentiometers, 1x Buzzer, Resistors.
 4.  **Motors**: L298N Motor Driver, 2x DC Motors, 2x Wheels, 9V Li-ion Battery.
