@@ -1,143 +1,30 @@
-# Environment Setup Guide ⚙️
+# ⚙️ Quick Start Guide
 
-Before you can run code on your Pico, you need to:
-1. Install MicroPython firmware on the Pico
-2. Install an editor (Thonny or VS Code)
-3. Connect and test
+Get your environment ready in 5 minutes.
 
----
+## 🚀 1. The Firmware (The Brain)
+Your Pico needs an operating system to understand Python.
+1.  Download the **[Latest MicroPython .uf2](https://micropython.org/download/rp2-pico/)**.
+2.  Hold the **BOOTSEL** button on your Pico while plugging it in.
+3.  Drag the `.uf2` file onto the new `RPI-RP2` drive.
+4.  The Pico will reboot. Use a high-quality USB cable!
 
-## Step 1: Install MicroPython on the Pico
+## 💻 2. The Editor (The Interface)
+We recommend **Thonny** for beginners or **VS Code** for pros.
 
-### Download the Firmware
-1. Go to [raspberrypi.com/documentation](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html)
-2. Download the **latest `.uf2` file** for Raspberry Pi Pico
+### Option A: Thonny (Recommended)
+- **Download**: [thonny.org](https://thonny.org/)
+- **Setup**: Bottom-right corner -> Select `MicroPython (Raspberry Pi Pico)`.
+- **Verify**: Type `print("Hello")` in the shell. If it talks back, you win.
 
-### Flash the Firmware
-1. **Hold down the BOOTSEL button** on your Pico (the white button)
-2. While holding it, **plug the Pico into your computer** via USB
-3. Release the button. The Pico will appear as a USB drive called "RPI-RP2"
-4. **Drag and drop** the `.uf2` file onto the drive
-5. The Pico will **automatically reboot** and disappear as a drive
+### Option B: VS Code (Advanced)
+- Install the **MicroPico** extension.
+- Use `Ctrl+Shift+P` -> `MicroPico: Configure Project`.
 
-✅ **Done!** Your Pico is now running MicroPython.
-
----
-
-## Step 2: Choose Your Editor
-
-You have three main options:
-
-### Option A: Mu Editor (Recommended - What This Course Uses)
-
-#### Install Mu Editor
-- **Windows/Mac/Linux**: [codewith.mu](https://codewith.mu/)
-- Download and install (simple, beginner-friendly interface)
-
-#### Configure Mu
-1. Open Mu Editor
-2. Click **Mode** button at the top
-3. Select **"RP2040"** or **"Pico"** mode
-4. Click **OK**
-
-#### Test Connection
-1. Plug in your Pico
-2. Click the **REPL** button (bottom toolbar) to open the interactive shell
-3. You should see:
-   ```
-   MicroPython v1.xx.x on 2024-xx-xx; Raspberry Pi Pico with RP2040
-   >>>
-   ```
-4. Type: `print("Hello, Pico!")` and press Enter
-
-✅ If you see the message, you're connected!
-
-**Note on Notebooks**: Mu doesn't natively support `.ipynb` files. Simply copy/paste the code cells from each notebook into Mu's editor window.
+## 📦 3. The Libraries (The Tuning)
+For Phase 04, you will need the OLED driver.
+1.  Download `ssd1306.py` from our `projects/04_Phase_Visual_UI/library/` folder.
+2.  Save it to the **root** of your Pico using your editor.
 
 ---
-
-### Option B: Thonny (Alternative)
-
-#### Install Thonny
-- **Windows/Mac/Linux**: [thonny.org](https://thonny.org/)
-- Download and install
-
-#### Configure Thonny
-1. Open Thonny
-2. Go to **Tools → Options → Interpreter**
-3. Select **"MicroPython (Raspberry Pi Pico)"**
-4. Click **OK**
-
----
-
-### Option C: VS Code (For Advanced Users)
-
-#### Install VS Code
-- [code.visualstudio.com](https://code.visualstudio.com/)
-
-#### Install the Pico Extension
-1. Open VS Code
-2. Go to **Extensions** (Ctrl+Shift+X)
-3. Search for **"MicroPico"** or **"Pico-W-Go"**
-4. Install the extension
-
-#### Configure
-1. Press `Ctrl+Shift+P` (Command Palette)
-2. Type: `MicroPico: Configure Project`
-3. Follow the prompts to set up your workspace
-
----
-
-## Step 3: Open the Notebooks
-
-### For Thonny Users
-- Thonny doesn't natively support `.ipynb` files
-- **Workaround**: Copy/paste code cells from the notebook into Thonny's editor
-
-### For VS Code Users
-1. Install the **Jupyter Extension** in VS Code
-2. Open any `.ipynb` file
-3. Select **MicroPython kernel** when prompted
-4. Run cells with `Shift+Enter`
-
----
-
-## Step 4: Verify System Communication
-
-Run this simple logic test to ensure your computer can send instructions to the Pico's processor:
-
-```python
-import machine
-import os
-
-# Identify the chip
-print(f"Controller: {os.uname().machine}")
-
-# Perform a basic math operation in memory
-result = 12 * 12
-print(f"Math calculation verified: 12 * 12 = {result}")
-
-# Check the main system frequency
-print(f"CPU Frequency: {machine.freq() / 1000000} MHz")
-```
-
-**Expected Result**: The terminal should print the chip details and the math result.
-
-✅ If you see the text, your communication channel is established and the Pico is processing code correctly.
-
----
-
-## Troubleshooting
-
-### "Device not found" error
-- Make sure you flashed MicroPython (Step 1).
-- Try a different USB cable (ensure it is a high-quality data cable).
-- On Windows, verify the COM port in Device Manager.
-
-### "Import Error: machine"
-- You're running **standard Python** on your computer instead of **MicroPython** on the Pico.
-- Ensure your editor's interpreter is set to "MicroPython (Raspberry Pi Pico)".
-
----
-
-**All set?** You are ready to begin exploring the system logic.
+[⬅️ Back to Home](./README.md)

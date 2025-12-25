@@ -1,62 +1,51 @@
-# Raspberry Pi Pico: Physical Computing & Engineering 🚥🎓
+# ⚡ Raspberry Pi Pico: The Engineering Curriculum
 
-Welcome to the **Mastery-Level Pico Curriculum**. This repository is a comprehensive guide designed to take students from absolute zero to building integrated, intelligent hardware systems.
+![Status](https://img.shields.io/badge/Status-Active-success) ![Platform](https://img.shields.io/badge/Platform-RP2040-blue) ![Level](https://img.shields.io/badge/Level-Zero_to_Hero-orange)
 
-Instead of just "learning to code," this course focuses on **Engineering Thinking**—teaching the 'Why' behind every signal, loop, and object.
+> **"Don't just write code. Build systems."**
 
----
-
-## 🚀 The Learning Path
-To get the most out of this course, we recommend the following sequence:
-1.  **Prep**: Follow the **[Setup Guide](projects/Setup_Guide.md)** to configure your environment.
-2.  **Theory**: Read the **[Technical Library](#-technical-library)** below to understand how the hardware "thinks."
-3.  **Practice**: Dive into the **[Project Library](#-project-library)** to build your first system.
+Welcome to the **Mastery-Level Physical Computing Course**. This repository is designed to transform you from a beginner into a systems engineer, capable of building integrated, autonomous robots.
 
 ---
 
-## 📚 Technical Library
-*Theory before Practice.* Deep-dive notes on the science and engineering behind the hardware.
+## 🗺️ The Roadmap
 
-*   **[Component Signals](Technical_Notes/Component_Signals.md)**: Understanding Digital vs. Analog vs. PWM.
-*   **[Perception & Gamma](projects/LED/07_Perception_and_Gamma.md)**: Why computers and humans see light differently.
-*   **[Motor Control Theory](Technical_Notes/08_Motor_Control_Theory.md)**: H-Bridges, Power Isolation, and Safety.
-*   **[Differential Drive Logic](Technical_Notes/09_Differential_Drive_Logic.md)**: The Geometry of Turing.
-*   **[Deployment & Standalone](projects/Deployment_and_Main_PY.md)**: Taking your projects "off the leash."
+Our curriculum is organized into **5 Distinct Phases**. Follow them in order to build your skills layer by layer.
 
----
-
-## 📁 Project Library
-Once you've mastered the theory, put it into action. Every project includes **Engineering Insights** in the code comments.
-
-### 1. [01_Beginner](projects/LED/01_Beginner)
-*Core Signals & Fundamentals*
-*   **Blinky & Gamma**: Mastering the LED pulse.
-*   **Emergency Siren**: Coordinated light and sound.
-*   **Analog Inputs**: Reading the physical world with knobs.
-*   **Traffic Light**: The Beginner Capstone project.
-
-### 2. [02_Mastery_Series](projects/LED/02_Mastery_Series)
-*Games, Simulations & Software Architecture*
-*   **F1 Engine Simulator**: Predictive telemetry and shift lights.
-*   **Reaction Game**: Precision millisecond timing.
-*   **The Virtual Lightbulb**: Intro to **Object-Oriented Programming (OOP)**.
-*   **Mood Lantern**: Organic motion with Sine waves.
-
-### 3. [03_Motor_Series](projects/motors)
-*Kinetic Motion & Axle Mechanics*
-*   **Motor Calibration**: Mastering speed ramping and H-bridges.
-*   **Synchronized AWD**: Navigating a 4WD chassis with dual-axle logic.
-*   **The Motor Library**: Building a high-level API for movement.
+| 🏁 Phase | 🏷️ Title | 🎯 Mission |
+| :--- | :--- | :--- |
+| **01** | [**Essentials**](./projects/01_Phase_Essentials/README.md) | **First Light.** Learn to deploy code and diagnose hardware. <br> *Tools: I2C Scanner, Deployment Guide* |
+| **02** | [**Digial I/O**](./projects/02_Phase_Input_Output/README.md) | **The Nervous System.** Master LEDs, Buttons, and Signals. <br> *Projects: Traffic Light, Reaction Game* |
+| **03** | [**Motion**](./projects/03_Phase_Motion_Control/README.md) | **Kinetic Power.** Control DC Motors, H-Bridges, and Physics. <br> *Projects: AWD Chassis logic* |
+| **04** | [**Visual UI**](./projects/04_Phase_Visual_UI/README.md) | **The Face.** Build rich OLED interfaces and Animations. <br> *Projects: AI Eye, Status Dashboard* |
+| **05** | [**Integration**](./projects/05_Phase_System_Integration/README.md) | **The Final Boss.** Combine everything into one system. <br> *Capstone: Autonomous AWD Truck* |
 
 ---
 
-## 🔧 Hardware Requirements
-To complete this course, you will need:
-1.  **Raspberry Pi Pico** (Original, W, or Pico 2)
-2.  **Breadboard & Jumper Wires**
-3.  **Components**: RGB LED, 2x Potentiometers, 1x Buzzer, Resistors.
-4.  **Motors**: L298N Motor Driver, 2x DC Motors, 2x Wheels, 9V Li-ion Battery.
+## 🏗️ How to Use This Workspace
+
+### 1. 📥 Setup
+Before you write a single line of code, ensure your environment is ready.
+👉 **[Read the Setup Guide](./Setup_Guide.md)**
+
+### 2. 🧠 Theory & Concepts
+We don't just paste code; we explain the engineering. Check the **[Notes Library](./projects/04_Phase_Visual_UI/notes/)** for Deep Dives into:
+- **I2C Protocols** (How chips talk)
+- **H-Bridge Logic** (How low power controls high power)
+- **FrameBuffers** (How memory becomes pixels)
+
+### 3. 🛠️ The Workbench
+Inside the `projects/` folder, you will find:
+- **`library/`**: The raw drivers (like `ssd1306.py`).
+- **`lessons/`**: Step-by-step code files.
+- **`notes/`**: Explanatory notebooks.
 
 ---
 
-**Happy Engineering!** 🏎️🛰️🌙
+## ⚡ Quick Links
+- [Deployment Guide](./projects/01_Phase_Essentials/Deployment_and_Main_PY.ipynb) (How to run on battery)
+- [I2C Scanner Tool](./projects/01_Phase_Essentials/i2c_scanner.py) (Hardware debugger)
+- [Full Syllabus](./Syllabus_Overview.md) (Detailed topic list)
+
+---
+*Created for future engineers.* 🏎️🛰️👁️
