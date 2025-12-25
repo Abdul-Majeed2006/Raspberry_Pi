@@ -19,6 +19,7 @@ Our curriculum is organized into **5 Distinct Phases**. Follow them in order to 
 | **03** | [**Motion**](./projects/03_Phase_Motion_Control/README.md) | **Kinetic Power.** Control DC Motors, H-Bridges, and Physics. <br> *Projects: AWD Chassis logic* |
 | **04** | [**Visual UI**](./projects/04_Phase_Visual_UI/README.md) | **The Face.** Build rich OLED interfaces and Animations. <br> *Projects: AI Eye, Status Dashboard* |
 | **05** | [**Integration**](./projects/05_Phase_System_Integration/README.md) | **The Final Boss.** Combine everything into one system. <br> *Capstone: Autonomous AWD Truck* |
+| **06** | [**Interface**](./projects/06_Phase_Human_Interface/README.md) | **The Controls.** Mechanical Buttons and HMI. <br> *Projects: Eye Controller, Mode Switching* |
 
 ---
 
