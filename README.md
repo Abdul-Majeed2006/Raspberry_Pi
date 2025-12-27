@@ -50,4 +50,14 @@ Inside the `projects/` folder, you will find:
 - [Full Syllabus](./Syllabus_Overview.md) (Detailed topic list)
 
 ---
+## ⚖️ Legal & Licensing
+
+This repository is **100% Proprietary**. 
+
+- **License**: [Proprietary "All Rights Reserved"](./LICENSE)
+- **Legal Notices**: [Liability & Indemnification](./LEGAL_NOTICE.md)
+
+Unauthorized distribution, copying, or commercial use is strictly prohibited and subject to legal action. 
+
+---
 *Created for future engineers.* 🏎️🛰️👁️
