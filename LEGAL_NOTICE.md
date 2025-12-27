@@ -1,6 +1,5 @@
 # LEGAL NOTICE & DISCLAIMERS
 
-
 ## 1. LIABILITY LIMITATION
 
 This software and documentation are provided **"AS IS"**, without warranty of any kind, express or implied. In no event shall the author, Abdul-Majeed2006, be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software, its use, or other dealings in the software. This includes, but is not limited to:
@@ -24,8 +23,10 @@ The content of this curriculum is for educational purposes only. While every eff
 ## 4. PIRACY WARNING & ETHICAL USE
 
 Unauthorized distribution of this material is a violation of international copyright law.
+
 - **Symbolic Warning**: ⛔️🚫🏴‍☠️
 - **Legal Warning**: Any unauthorized copying, distribution, or commercialization of this content will be met with immediate legal action.
 
 ---
+
 **By using any files in this repository, you acknowledge that you have read, understood, and agree to these terms.**
