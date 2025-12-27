@@ -13,6 +13,8 @@ Click the links below to explore each phase of the journey:
 | **03** | [**Motion Control**](./03_Phase_Motion_Control/README.md) | Robotics Physics | L298N Bridges, DC Motors, AWD Logic |
 | **04** | [**Visual UI**](./04_Phase_Visual_UI/README.md) | User Interfaces | OLED Screens, Graphics, State Animation |
 | **05** | [**Integration**](./05_Phase_System_Integration/README.md) | The Master Project | Building the AWD Truck Dashboard |
+| **06** | [**Interface**](./06_Phase_Human_Interface/README.md) | The Controls | Mechanical Buttons and HMI |
+| **07** | [**Networking**](./07_Phase_Networking/README.md) | The Internet | Wi-Fi, NTP, Web Data |
 
 ---
 

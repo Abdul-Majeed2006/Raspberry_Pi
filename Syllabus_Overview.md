@@ -39,5 +39,19 @@ A detailed breakdown of every concept covered in the **Raspberry Pi Pico Mastery
 - **Autonomous Behaviors**: Combining sensors and motors for self-driving logic.
 - **Final Deployment**: Packaging the project for the real world.
 
+## 🎹 Phase 06: Human Interface (HMI)
+*The intersection of hand and silicon.*
+- **Physical Logic**: Pull-Ups, Pull-Downs, and Internal Resistors.
+- **Debouncing**: Solving signal noise with software delays.
+- **State Toggles**: Turning a momentary press into a persistent setting.
+- **Interrupts (IRQ)**: Responding to humans in real-time without blocking the CPU.
+
+## 🌐 Phase 07: Networking (Wireless)
+*Connecting to the world.*
+- **Wi-Fi Handshaking**: Connecting the Pico W to home networks.
+- **NTP Sync**: Fetching precise atomic time from the internet.
+- **HTTP Requests**: Fetching live data (Weather, News, Time).
+- **The Backend**: Brief introduction to hosting a control server on the Pico.
+
 ---
 [⬅️ Back to Home](./README.md)

@@ -10,12 +10,12 @@ Welcome to the **Mastery-Level Physical Computing Course**. This repository is d
 
 ## 🗺️ The Roadmap
 
-Our curriculum is organized into **5 Distinct Phases**. Follow them in order to build your skills layer by layer.
+Our curriculum is organized into **7 Distinct Phases**. Follow them in order to build your skills layer by layer.
 
 | 🏁 Phase | 🏷️ Title | 🎯 Mission |
 | :--- | :--- | :--- |
 | **01** | [**Essentials**](./projects/01_Phase_Essentials/README.md) | **First Light.** Learn to deploy code and diagnose hardware. <br> *Tools: I2C Scanner, Deployment Guide* |
-| **02** | [**Digial I/O**](./projects/02_Phase_Input_Output/README.md) | **The Nervous System.** Master LEDs, Buttons, and Signals. <br> *Projects: Traffic Light, Reaction Game* |
+| **02** | [**Digital I/O**](./projects/02_Phase_Input_Output/README.md) | **The Nervous System.** Master LEDs, Buttons, and Signals. <br> *Projects: Traffic Light, Reaction Game* |
 | **03** | [**Motion**](./projects/03_Phase_Motion_Control/README.md) | **Kinetic Power.** Control DC Motors, H-Bridges, and Physics. <br> *Projects: AWD Chassis logic* |
 | **04** | [**Visual UI**](./projects/04_Phase_Visual_UI/README.md) | **The Face.** Build rich OLED interfaces and Animations. <br> *Projects: AI Eye, Status Dashboard* |
 | **05** | [**Integration**](./projects/05_Phase_System_Integration/README.md) | **The Final Boss.** Combine everything into one system. <br> *Capstone: Autonomous AWD Truck* |
