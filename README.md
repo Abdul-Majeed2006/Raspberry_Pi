@@ -54,6 +54,7 @@ Inside the `projects/` folder, you will find:
 - [Deployment Guide](./projects/01_Phase_Essentials/Deployment_and_Main_PY.ipynb) (How to run on battery)
 - [I2C Scanner Tool](./projects/01_Phase_Essentials/i2c_scanner.py) (Hardware debugger)
 - [Full Syllabus](./Syllabus_Overview.md) (Detailed topic list)
+- [**Companion Sensor Library**](https://github.com/Abdul-Majeed2006/Raspberry_Pi_Sensors_37) (Drivers for 37-in-1 Kit)
 
 ---
 

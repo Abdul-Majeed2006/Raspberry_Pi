@@ -15,7 +15,8 @@ A detailed breakdown of every concept covered in the **Raspberry Pi Pico Mastery
 - **Digital Signals**: High (3.3V) vs. Low (GND).
 - **PWM (Pulse Width Modulation)**: Simulating analog perception.
 - **Human Input**: Debouncing buttons and reading state changes.
-- **The Loop**: Understanding the `while True` realtime cycle.
+- **The Loop**: Understanding the `while True` cycle.
+- **Extended Hardware**: For tilt switches, shock sensors, and laser modules, see the [Sensor Masterclass](https://github.com/Abdul-Majeed2006/Raspberry_Pi_Sensors_37/tree/main/Phase_02_Input_Devices).
 
 ## 🏎️ Phase 03: Kinetic Energy (Motion)
 *Moving atoms in the physical world.*
