@@ -53,7 +53,22 @@ We have provided the robust "Drivers" so you don't have to reinvent the wheel. Y
 
 ---
 
-## 🆘 Troubleshooting Guide (If you get stuck)
+## � Level 99: The Need for Speed (Drifting)
+The driver we gave you in `drivers/AWD.py` is **basic**. It turns the motors ON (100%) or OFF (0%).
+This means your robot can only move in jerky "Tank Turns".
+
+**The Challenge:**
+Can you modify `drivers/AWD.py` to use `machine.PWM`?
+If you can control the speed (0-65535), you can implement **Drifting**!
+
+*   **Soft Turn**: Left Motor 100%, Right Motor 50%.
+*   **Burnout**: Pulse the motors rapidly.
+
+**Prove your mastery. Hack the driver.**
+
+---
+
+## �🆘 Troubleshooting Guide (If you get stuck)
 
 **1. "The screen is black!"**
 *   Check your wiring: SDA->GP0, SCL->GP1, VCC->3.3V, GND->GND.
