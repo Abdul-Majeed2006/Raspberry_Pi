@@ -17,10 +17,11 @@ Our curriculum is organized into **7 Distinct Phases**. Follow them in order to 
 | **01** | [**Essentials**](./projects/01_Phase_Essentials/README.md) | **First Light.** Learn to deploy code and diagnose hardware. TP: I2C Scanner, Deployment Guide |
 | **02** | [**Digital I/O**](./projects/02_Phase_Input_Output/README.md) | **The Nervous System.** Master LEDs, Buttons, and Signals. Projects: Traffic Light, Reaction Game |
 | **03** | [**Motion**](./projects/03_Phase_Motion_Control/README.md) | **Kinetic Power.** Control DC Motors, H-Bridges, and Physics. Projects: AWD Chassis logic |
-| **04** | [**Visual UI**](./projects/04_Phase_Visual_UI/README.md) | **The Face.** Build rich OLED interfaces and Animations. Projects: AI Eye, Status Dashboard |
-| **05** | [**Integration**](./projects/05_Phase_System_Integration/README.md) | **The Final Boss.** Combine everything into one system. Capstone: Autonomous AWD Truck |
-| **06** | [**Interface**](./projects/06_Phase_Human_Interface/README.md) | **The Controls.** Mechanical Buttons and HMI. Projects: Eye Controller, Mode Switching |
-| **07** | [**Networking**](./projects/07_Phase_Networking/README.md) | **The Internet.** Wi-Fi, NTP, and Web Data. Projects: World Clock Dashboard |
+| **04** | [**Sensing**](./projects/04_Phase_Environment_Sensing/README.md) | **The Sixth Sense.** Internal Temps, Physics, and Control Logic. (No Modules!) |
+| **05** | [**Visual UI**](./projects/05_Phase_Visual_UI/README.md) | **The Face.** Build rich OLED interfaces and Animations. Projects: AI Eye, Status Dashboard |
+| **06** | [**Integration**](./projects/06_Phase_System_Integration/README.md) | **The Final Boss.** Combine everything into one system. Capstone: Autonomous AWD Truck |
+| **07** | [**Interface**](./projects/07_Phase_Human_Interface/README.md) | **The Controls.** Mechanical Buttons and HMI. Projects: Eye Controller, Mode Switching |
+| **08** | [**Networking**](./projects/08_Phase_Networking/README.md) | **The Internet.** Wi-Fi, NTP, and Web Data. Projects: World Clock Dashboard |
 
 ---
 
