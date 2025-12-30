@@ -58,14 +58,14 @@ Inside the `projects/` folder, you will find:
 
 ---
 
-## ⚖️ Legal & Licensing
+## ⚖️ License & Disclaimer
 
-This repository is **100% Proprietary**.
+This project is **Open Source**.
 
-- **License**: [Proprietary "All Rights Reserved"](./LICENSE)
-- **Legal Notices**: [Liability & Indemnification](./LEGAL_NOTICE.md)
+- **License**: [MIT License](./LICENSE) - Free to use, modify, and distribute.
+- **Safety**: [Hardware Disclaimer](./DISCLAIMER.md) - Use at your own risk.
 
-Unauthorized distribution, copying, or commercial use is strictly prohibited and subject to legal action.
+Built for the community. Share your improvements!
 
 ---
 
