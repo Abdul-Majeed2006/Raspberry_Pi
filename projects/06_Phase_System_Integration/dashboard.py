@@ -17,10 +17,6 @@ I2C_ID = 0
 SDA_PIN = 16
 SCL_PIN = 17
 
-# Motor Pins (Front: 15,14,13 | Back: 10,11,12)
-FRONT_PINS = (15, 14, 13)
-BACK_PINS = (10, 11, 12)
-
 class Dashboard:
     def __init__(self):
         # 1. Wake up the Screen
@@ -30,7 +26,7 @@ class Dashboard:
         
         # 2. Wake up the Truck
         print("Initializing AWD Chassis...")
-        self.truck = AWD(FRONT_PINS, BACK_PINS)
+        self.truck = AWD()
         
         # 3. Boot Animation
         self.show_boot_screen()
