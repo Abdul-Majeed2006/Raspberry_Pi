@@ -1,41 +1,54 @@
 # ==========================================================
-# MOTOR UTILITY: BI-DIRECTIONAL STRESS TEST
-# Goal: Verify if both axles can actually move in both directions.
+# ROBOT DEMO: AUTONOMOUS MANEUVERS
+# ==========================================================
+# Goal: Demonstrate the capabilities of the AWD Class.
+#
+# BEHAVIOR:
+# 1. Drive Forward (2s)
+# 2. Stop (1s)
+# 3. Reverse (2s)
+# 4. Turn Sequence
 # ==========================================================
 
-from machine import Pin
+from AWD import AWD
 import time
 
-# --- PINS (FRONT AXLE) ---
-ena = Pin(15, Pin.OUT); in1 = Pin(14, Pin.OUT); in2 = Pin(13, Pin.OUT)
-
-# --- PINS (BACK AXLE) ---
-enb = Pin(10, Pin.OUT); in3 = Pin(11, Pin.OUT); in4 = Pin(12, Pin.OUT)
-
-def stress_test():
-    print("--- DIRECTIONAL STRESS TEST START ---")
+def main():
+    # Initialize the Robot (uses HardwareConfig inside inputs)
+    robot = AWD()
     
-    # 1. FRONT AXLE ONLY
-    print("FRONT AXLE: Forward...")
-    ena.value(1); in1.value(0); in2.value(1); time.sleep(1)
-    print("FRONT AXLE: Stop...")
-    ena.value(0); in1.value(0); in2.value(0); time.sleep(1)
+    print(">>> MISSION START: DEMO PATTERN <<<")
+    time.sleep(1)
     
-    print("FRONT AXLE: BACKWARD...")
-    ena.value(1); in1.value(0); in2.value(1); time.sleep(1)
-    ena.value(0); in1.value(0); in2.value(0); time.sleep(1)
+    try:
+        # Leg 1: Deployment
+        print("[1/4] Moving Out...")
+        robot.forward()
+        time.sleep(2)
+        robot.stop()
+        time.sleep(1)
+        
+        # Leg 2: Retreat
+        print("[2/4] Returning...")
+        robot.backward()
+        time.sleep(2)
+        robot.stop()
+        time.sleep(1)
+        
+        # Leg 3: Evasion
+        print("[3/4] Evasive Maneuvers...")
+        robot.turn_left()
+        time.sleep(1)
+        robot.turn_right()
+        time.sleep(1)
+        robot.stop()
+        
+    except KeyboardInterrupt:
+        print("!!! EMERGENCY STOP !!!")
+    
+    finally:
+        robot.stop()
+        print(">>> MISSION COMPLETE <<<")
 
-    # 2. BACK AXLE ONLY
-    print("BACK AXLE: Forward...")
-    enb.value(1); in3.value(0); in4.value(1); time.sleep(2)
-    print("BACK AXLE: Stop...")
-    enb.value(0); in3.value(0); in4.value(0); time.sleep(1)
-    
-    print("BACK AXLE: BACKWARD...")
-    enb.value(1); in3.value(1); in4.value(0); time.sleep(2)
-    enb.value(0); in3.value(0); in4.value(0)
-    
-    print("--- TEST COMPLETE ---")
-
-#if __name__ == "__main__":
-stress_test()
+if __name__ == "__main__":
+    main()

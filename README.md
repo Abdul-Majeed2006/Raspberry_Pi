@@ -59,9 +59,11 @@ Inside the `projects/` folder, you will find:
 
 ---
 
-## ⚖️ License & Disclaimer
+## ⚖️ Legal & Licensing
 
-This project is **Open Source**.
+**© Copyright 2025 Abdul-Majeed Babangida Zakari.**
+
+This project is **Open Source (MIT License)**.
 
 - **License**: [MIT License](./LICENSE) - Free to use, modify, and distribute.
 - **Safety**: [Hardware Disclaimer](./DISCLAIMER.md) - Use at your own risk.

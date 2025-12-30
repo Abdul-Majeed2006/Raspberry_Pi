@@ -1,67 +1,90 @@
 # ==========================================================
-# PHASE 08: NETWORKING (CAPSTONE)
-# Title: OLED World Clock Dashboard
-# Goal: Display live internet time on your screen.
+# LESSON 03: THE WORLD CLOCK (WEB SERVER)
+# ==========================================================
+# Goal: Host a Website on the Pico that shows the time.
+# Concept: Sockets. We open a "Door" (Port 80) and listen
+#          for web browsers knocking.
 # ==========================================================
 
-from machine import Pin, I2C
-from ssd1306 import SSD1306_I2C
 import network
-import ntptime
+import socket
 import time
+import secrets
+import machine
+import ntptime
 
-# --- CONFIG ---
-SSID = "YOUR_WIFI_NAME"
-PASSWORD = "YOUR_PASSWORD"
-TIMEZONE_OFFSET = -5 # e.g., -5 for EST (adjust to your area)
-
-# --- HARDWARE ---
-i2c = I2C(0, sda=Pin(16), scl=Pin(17))
-oled = SSD1306_I2C(128, 64, i2c)
-
-def connect_and_sync():
-    oled.fill(0)
-    oled.text("Connecting...", 0, 0)
-    oled.show()
-    
+# --- SETUP TIME ---
+def setup_net_and_time():
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
-    wlan.connect(SSID, PASSWORD)
-    
-    while not wlan.isconnected():
-        time.sleep(1)
-        
-    ntptime.settime()
-    oled.fill(0)
-    oled.text("Synced!", 0, 0)
-    oled.show()
-    time.sleep(1)
+    if not wlan.isconnected():
+        wlan.connect(secrets.SSID, secrets.PASSWORD)
+        while not wlan.isconnected():
+            time.sleep(1)
+    print("IP Address:", wlan.ifconfig()[0])
+    try:
+        ntptime.settime() 
+    except: 
+        pass
+
+# --- HTML GENERATOR ---
+def get_html(time_str):
+    html = f"""<!DOCTYPE html>
+    <html>
+    <head> <title>Pico Clock</title> <meta http-equiv="refresh" content="5"> 
+    <style>
+        body {{ font-family: sans-serif; text-align: center; background-color: #111; color: #0f0; }}
+        h1 {{ font-size: 3rem; }}
+        p {{ font-size: 1.5rem; color: #fff; }}
+    </style>
+    </head>
+    <body>
+        <h1>Pico World Clock</h1>
+        <p>Current System Time:</p>
+        <div style="border: 2px solid #0f0; display: inline-block; padding: 20px;">
+            <h1>{time_str}</h1>
+        </div>
+        <p>Updates every 5 seconds.</p>
+    </body>
+    </html>
+    """
+    return html
 
 def main():
-    connect_and_sync()
+    setup_net_and_time()
+    
+    # Open Socket (Port 80 = HTTP)
+    addr = socket.getaddrinfo('0.0.0.0', 80)[0][-1]
+    s = socket.socket()
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Allow fast restart
+    s.bind(addr)
+    s.listen(1)
+
+    print("--- SERVER LISTENING ---")
     
     while True:
-        # Get UTC time
-        utc = time.time()
-        # Apply offset (seconds)
-        local = utc + (TIMEZONE_OFFSET * 3600)
-        t = time.localtime(local)
-        
-        oled.fill(0)
-        # Header
-        oled.fill_rect(0, 0, 128, 12, 1)
-        oled.text("WORLD CLOCK", 25, 2, 0)
-        
-        # Date
-        date_str = f"{t[0]}/{t[1]:02d}/{t[2]:02d}"
-        oled.text(date_str, 30, 20, 1)
-        
-        # Time (BIG)
-        time_str = f"{t[3]:02d}:{t[4]:02d}:{t[5]:02d}"
-        oled.text(time_str, 30, 40, 1)
-        
-        oled.show()
-        time.sleep(1)
+        try:
+            cl, addr = s.accept()
+            # print('Client connected from', addr)
+            
+            # Read Request (Ignored, we serve same page to everyone)
+            request = cl.recv(1024)
+            # print(request)
+            
+            # Get Time
+            tm = time.localtime()
+            t_str = "{:02d}:{:02d}:{:02d}".format(tm[3], tm[4], tm[5])
+            
+            # Send Response
+            response = get_html(t_str)
+            cl.send('HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n')
+            cl.send(response)
+            cl.close()
+            
+        except Exception as e:
+            print("Conn Error:", e)
+            try: cl.close()
+            except: pass
 
 if __name__ == "__main__":
     main()

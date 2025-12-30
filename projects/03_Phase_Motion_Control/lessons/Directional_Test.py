@@ -1,41 +1,50 @@
 # ==========================================================
-# MOTOR UTILITY: BI-DIRECTIONAL STRESS TEST
-# Goal: Verify if both axles can actually move in both directions.
+# TOOL: HARDWARE DIAGNOSTIC (H-BRIDGE)
+# ==========================================================
+# Goal: Validates physical wiring of the L298N Motor Driver.
+# Logic: Cycles every input pin individually.
+#
+# USAGE:
+# 1. Lift the Robot off the ground (Wheels in air).
+# 2. Run this script.
+# 3. Verify each wheel spins in the correct order.
 # ==========================================================
 
 from machine import Pin
 import time
 
-# --- PINS (FRONT AXLE) ---
-ena = Pin(15, Pin.OUT); in1 = Pin(14, Pin.OUT); in2 = Pin(13, Pin.OUT)
+# We copy the config here so this tool is standalone (in case AWD.py is broken)
+class HardwareConfig:
+    # Front
+    F_ENA = 15; F_IN1 = 14; F_IN2 = 13
+    # Back
+    B_ENB = 10; B_IN3 = 11; B_IN4 = 12
 
-# --- PINS (BACK AXLE) ---
-enb = Pin(10, Pin.OUT); in3 = Pin(11, Pin.OUT); in4 = Pin(12, Pin.OUT)
+def test_pin(name, pin_id, duration=1.0):
+    print(f"--> TESTING: {name} (GP{pin_id})")
+    try:
+        p = Pin(pin_id, Pin.OUT)
+        p.value(1)
+        time.sleep(duration)
+        p.value(0)
+    except Exception as e:
+        print(f"    FAIL: {e}")
+    time.sleep(0.5)
 
-def stress_test():
-    print("--- DIRECTIONAL STRESS TEST START ---")
+def main():
+    print("--- H-BRIDGE DIAGNOSTIC START ---")
     
-    # 1. FRONT AXLE ONLY
-    print("FRONT AXLE: Forward...")
-    ena.value(1); in1.value(0); in2.value(1); time.sleep(1)
-    print("FRONT AXLE: Stop...")
-    ena.value(0); in1.value(0); in2.value(0); time.sleep(1)
+    # 1. Front Axle
+    test_pin("Front ENA (Power)", HardwareConfig.F_ENA)
+    test_pin("Front IN1 (Logic A)", HardwareConfig.F_IN1)
+    test_pin("Front IN2 (Logic B)", HardwareConfig.F_IN2)
     
-    print("FRONT AXLE: BACKWARD...")
-    ena.value(1); in1.value(0); in2.value(1); time.sleep(1)
-    ena.value(0); in1.value(0); in2.value(0); time.sleep(1)
+    # 2. Back Axle
+    test_pin("Back ENB (Power)", HardwareConfig.B_ENB)
+    test_pin("Back IN3 (Logic A)", HardwareConfig.B_IN3)
+    test_pin("Back IN4 (Logic B)", HardwareConfig.B_IN4)
+    
+    print("--- DIAGNOSTIC COMPLETE ---")
 
-    # 2. BACK AXLE ONLY
-    print("BACK AXLE: Forward...")
-    enb.value(1); in3.value(0); in4.value(1); time.sleep(2)
-    print("BACK AXLE: Stop...")
-    enb.value(0); in3.value(0); in4.value(0); time.sleep(1)
-    
-    print("BACK AXLE: BACKWARD...")
-    enb.value(1); in3.value(1); in4.value(0); time.sleep(2)
-    enb.value(0); in3.value(0); in4.value(0)
-    
-    print("--- TEST COMPLETE ---")
-
-#if __name__ == "__main__":
-stress_test()
+if __name__ == "__main__":
+    main()
