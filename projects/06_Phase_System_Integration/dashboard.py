@@ -1,5 +1,5 @@
 # ==========================================================
-# PHASE 05: SYSTEM INTEGRATION (DASHBOARD CONTROLLER)
+# PHASE 06: SYSTEM INTEGRATION (DASHBOARD CONTROLLER)
 # Goal: Run Motors and OLED Screen simultaneously.
 # ==========================================================
 

@@ -1,5 +1,5 @@
 # ==========================================================
-# PHASE 06: HUMAN INTERFACE (LESSON 3)
+# PHASE 07: HUMAN INTERFACE (LESSON 3)
 # Title: The Eye Controller
 # Goal: Use 2 Keys to look Left and Right!
 # ==========================================================

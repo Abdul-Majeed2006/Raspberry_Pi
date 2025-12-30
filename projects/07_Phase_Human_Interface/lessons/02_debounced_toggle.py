@@ -1,5 +1,5 @@
 # ==========================================================
-# PHASE 06: HUMAN INTERFACE (LESSON 2)
+# PHASE 07: HUMAN INTERFACE (LESSON 2)
 # Title: Debouncing & Toggles
 # Goal: Make a switch act like a clean "Toggle" (Click ON, Click OFF).
 # ==========================================================

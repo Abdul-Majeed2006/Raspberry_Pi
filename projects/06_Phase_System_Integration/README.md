@@ -1,4 +1,4 @@
-# 🛰️ Phase 05: System Integration
+# 🛰️ Phase 06: System Integration
 
 This is the "Final Boss" of the curriculum. Here, we combine everything we've learned into a single, complex system.
 

@@ -1,5 +1,5 @@
 # ==========================================================
-# PHASE 07: NETWORKING (LESSON 2)
+# PHASE 08: NETWORKING (LESSON 2)
 # Title: NTP Time (The World Clock)
 # Goal: Ask the Internet for the current time.
 # ==========================================================

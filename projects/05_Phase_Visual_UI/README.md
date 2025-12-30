@@ -1,4 +1,4 @@
-# 👁️ Phase 04: Visual Feedback (UI)
+# 👁️ Phase 05: Visual Feedback (UI)
 
 Give your robot a face! This phase covers the world of OLED screens, custom graphics, and status dashboards.
 

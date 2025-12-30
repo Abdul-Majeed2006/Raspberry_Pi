@@ -1,5 +1,5 @@
 # ==========================================================
-# PHASE 07: NETWORKING (LESSON 1)
+# PHASE 08: NETWORKING (LESSON 1)
 # Title: The Wi-Fi Handshake
 # Goal: Connect your Pico W to the Internet.
 # ==========================================================

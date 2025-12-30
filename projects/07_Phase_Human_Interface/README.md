@@ -1,4 +1,4 @@
-# 🎹 Phase 06: Human Interface
+# 🎹 Phase 07: Human Interface
 
 Robots are cool, but control is better. In this phase, we learn how to read instructions from humans using Mechanical Switches.
 

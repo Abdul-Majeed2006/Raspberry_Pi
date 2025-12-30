@@ -1,5 +1,5 @@
 # ==========================================================
-# PHASE 06: HUMAN INTERFACE (LESSON 1)
+# PHASE 07: HUMAN INTERFACE (LESSON 1)
 # Title: The Mechanical Switch (Pull-Down Logic)
 # Goal: Use a mechanical key to turn on an LED.
 # ==========================================================

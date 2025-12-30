@@ -1,4 +1,4 @@
-# 🌐 Phase 07: Networking
+# 🌐 Phase 08: Networking
 
 Unleash the power of the **Pico W**! In this phase, we learn how to bridge the gap between your physical hardware and the global internet.
 
